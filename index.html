@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-edit-stamp="1794337077348"><head>
+<html lang="en" data-edit-stamp="1794341834272"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <title>Intelligent Requirements Management PoV | PwC</title>
@@ -209,6 +209,21 @@ h2{font-size:46px;max-width:1452px;margin-bottom:12px}
 .gtm-band{margin-top:16px}
 .costest{display:grid;grid-template-columns:176px repeat(3,1fr);grid-template-rows:auto repeat(4,1fr);column-gap:16px;height:512px}
 .costest .g-big b{font-size:34px}
+.benefit h2{font-size:40px;margin-bottom:8px}
+.benefit .subtitle{font-size:18px;line-height:1.32;margin-bottom:14px}
+.benefit .kicker{margin-bottom:14px}
+.benefit .band{padding:12px 18px;font-size:16px;line-height:1.32}
+.ben{display:grid;grid-template-columns:268px repeat(3,1fr);grid-template-rows:auto repeat(5,1fr);column-gap:16px;height:500px}
+.ben .g-hd{padding:12px 16px 10px}
+.ben .g-hd h3{font-size:18px}
+.ben .g-c{padding:8px 16px}
+.ben .g-big b{font-size:28px}
+.ben .g-per{font-size:13.5px;line-height:1.25;margin-top:4px}
+.ben .g-l{align-items:center}
+.ben .g-l b{display:block;font:bold 15px/1.15 var(--font-sans)}
+.ben .g-l span{display:block;font:400 13px/1.25 var(--font-sans);color:#555;margin-top:3px}
+.ben .g-per b{color:#000}
+.ben .g-c.c3 .g-per b{color:#fff}
 
 /* ============ APPROACH VALUE ============ */
 .av{display:grid;grid-template-columns:430px 1fr;gap:18px;height:592px}
@@ -315,7 +330,7 @@ h2{font-size:46px;max-width:1452px;margin-bottom:12px}
 .ask-foot .ask-band b{display:block;font:bold 12px var(--font-sans);text-transform:uppercase;letter-spacing:.4px;color:var(--pwc-orange);margin-bottom:5px}
 
 /* animations */
-.active h2,.active .subtitle,.active .content-label,.active .cost-cell,.active .press-card,.active .flow-wrap,.active .value-card,.active .tier,.active .pillar,.active .launch-callout,.active .gantt,.active .build-band>div,.active .ask-card,.active .band,.active .ask-band,.active .mkt-card,.active .mkt-matrix,.active .gtm,.active .costest,.active .av-facts,.active .av-cards .value-card,.active .who{animation:rise .55s ease both}
+.active h2,.active .subtitle,.active .content-label,.active .cost-cell,.active .press-card,.active .flow-wrap,.active .value-card,.active .tier,.active .pillar,.active .launch-callout,.active .gantt,.active .build-band>div,.active .ask-card,.active .band,.active .ask-band,.active .mkt-card,.active .mkt-matrix,.active .gtm,.active .costest,.active .ben,.active .av-facts,.active .av-cards .value-card,.active .who{animation:rise .55s ease both}
 .active .cost-cell:nth-child(2),.active .press-card:nth-child(2),.active .value-card:nth-child(2),.active .tier:nth-child(2),.active .pillar:nth-child(2),.active .build-band>div:nth-child(2),.active .ask-card:nth-child(2){animation-delay:.07s}
 .active .cost-cell:nth-child(3),.active .press-card:nth-child(3),.active .value-card:nth-child(3),.active .tier:nth-child(3),.active .pillar:nth-child(3),.active .build-band>div:nth-child(3),.active .ask-card:nth-child(3){animation-delay:.14s}
 .active .cost-cell:nth-child(4),.active .value-card:nth-child(4),.active .pillar:nth-child(4),.active .ask-card:nth-child(4){animation-delay:.21s}
@@ -552,9 +567,9 @@ body.editing .hint{display:none!important}
     </div>
     <div class="mkt-card val">
       <div class="mkt-tag">Value on one programme</div>
-      <span class="mkt-big">$2–5M</span>
-      <span class="mkt-per">A year, in labor and avoided delay</span>
-      <p>Indicative requirements case, once the same requirement is no longer re-entered across systems.</p>
+      <span class="mkt-big">$755k</span>
+      <span class="mkt-per">A year in team time, at $100 an hour</span>
+      <p>7,548 hours on one programme. Approach 3 adds $160k of hosting, $915k in all. The build-up is on the benefits slide.</p>
     </div>
     <div class="mkt-card">
       <div class="mkt-tag">Expansion · Pharma and biotech</div>
@@ -578,7 +593,7 @@ body.editing .hint{display:none!important}
     <div class="mm-c dev">The DHF is compiled from the live record and checked for gaps before it goes to FDA.</div>
     <div class="mm-c">The submission record is assembled from the same linked evidence and checked before it is filed.</div>
   </div>
-  <div class="mkt-src"><b>Indicative figures, not a forecast or a client result.</b> The obtainable-market and per-programme figures are indicative PwC cases. No pharma or biotech market size, share or growth rate is implied.</div>
+  <div class="mkt-src"><b>Indicative figures, not a forecast or a client result.</b> The obtainable-market figure is an indicative PwC case. The per-programme figure is the build-up on the benefits slide. No pharma or biotech market size, share or growth rate is implied.</div>
 </div>
 </section>
 
@@ -737,7 +752,43 @@ body.editing .hint{display:none!important}
 </div>
 </section>
 
-<!-- ============ 11. FUNDING ASK ============ -->
+<!-- ============ 11. CLIENT BENEFIT ============ -->
+<section class="slide benefit" data-section="Client benefit">
+<div class="slide-inner">
+  <div class="kicker"><span></span>Quantified client benefit</div>
+  <h2>What one programme gets back each year</h2>
+  <p class="subtitle">Illustrative, for one programme once the platform is live. $100 an hour. The hours saved are the same in all three approaches. Hosting is saved only when PwC hosts it.</p>
+  <div class="ben">
+    <div class="g-dir">Same work saved, then hosting<i></i></div>
+    <div class="g-hd c1"><div class="tag">Approach 1 · Your environment</div><h3>Your team maintains it</h3></div>
+    <div class="g-hd c2"><div class="tag">Approach 2 · Your environment</div><h3>PwC maintains it</h3></div>
+    <div class="g-hd c3"><div class="tag">Approach 3 · PwC environment</div><h3>PwC hosts and runs it</h3></div>
+    <div class="g-l"><div><b>Team time back</b><span>12 people × 8 hrs × 46 weeks</span></div></div>
+    <div class="g-c c1"><div class="g-big"><b>$442k</b></div><div class="g-per">4,416 hours no longer re-keyed.</div></div>
+    <div class="g-c c2"><div class="g-big"><b>$442k</b></div><div class="g-per">Same 4,416 hours.</div></div>
+    <div class="g-c c3"><div class="g-big"><b>$442k</b></div><div class="g-per">Same 4,416 hours.</div></div>
+    <div class="g-l"><div><b>FDA question</b><span>2 rounds × 8 people × 72 hrs</span></div></div>
+    <div class="g-c c1"><div class="g-big"><b>$115k</b></div><div class="g-per"><b>About 5 weeks</b> back. 80 hrs each today, 8 once it is live.</div></div>
+    <div class="g-c c2"><div class="g-big"><b>$115k</b></div><div class="g-per">Same 5 weeks and 1,152 hours.</div></div>
+    <div class="g-c c3"><div class="g-big"><b>$115k</b></div><div class="g-per">Same 5 weeks and 1,152 hours.</div></div>
+    <div class="g-l"><div><b>Change, file, audit</b><span>24 changes, the file, 2 audits</span></div></div>
+    <div class="g-c c1"><div class="g-big"><b>$102k</b></div><div class="g-per">24 × 4 × 6 hrs, plus 300 on the file and 144 on audits.</div></div>
+    <div class="g-c c2"><div class="g-big"><b>$102k</b></div><div class="g-per">Same 1,020 hours.</div></div>
+    <div class="g-c c3"><div class="g-big"><b>$102k</b></div><div class="g-per">Same 1,020 hours.</div></div>
+    <div class="g-l"><div><b>Rework avoided</b><span>2 × 6 people × 2 wks × 40 hrs</span></div></div>
+    <div class="g-c c1"><div class="g-big"><b>$96k</b></div><div class="g-per">960 hours. Gaps caught while the draft is open.</div></div>
+    <div class="g-c c2"><div class="g-big"><b>$96k</b></div><div class="g-per">Same 960 hours.</div></div>
+    <div class="g-c c3"><div class="g-big"><b>$96k</b></div><div class="g-per">Same 960 hours.</div></div>
+    <div class="g-l"><div><b>Tech and hosting</b><span>Only when PwC hosts it</span></div></div>
+    <div class="g-c c1 last"><div class="g-big"><b>$0</b></div><div class="g-per">You still host. You also staff the run.</div></div>
+    <div class="g-c c2 last"><div class="g-big"><b>$0</b></div><div class="g-per">You still host. The support fee replaces a run team.</div></div>
+    <div class="g-c c3 last"><div class="g-big"><b>$160k</b></div><div class="g-per">$8k a month for 3 environments, plus $64k.</div></div>
+  </div>
+  <div class="band gtm-band"><b>$755k a year</b> in team time on every approach, from 7,548 hours. Approach 3 adds $160k of hosting, <b>$915k</b> in all, and starts about a year sooner. Approaches 2 and 3 also spare you about 4 people to run it. That effort is the support fee on the cost slide. Illustrative, not a client result.</div>
+</div>
+</section>
+
+<!-- ============ 12. FUNDING ASK ============ -->
 <section class="slide fund" data-section="Funding ask">
 <div class="slide-inner">
   <div class="kicker"><span></span>Internal · R&amp;D Operations</div>

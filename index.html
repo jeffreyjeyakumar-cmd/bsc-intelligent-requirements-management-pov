@@ -207,6 +207,8 @@ h2{font-size:46px;max-width:1452px;margin-bottom:12px}
 .g-bar i.rng{background:var(--pwc-orange-200)}
 .g-c.c3 .g-bar i.rng{background:var(--pwc-orange-400)}
 .gtm-band{margin-top:16px}
+.costest{display:grid;grid-template-columns:176px repeat(3,1fr);grid-template-rows:auto repeat(4,1fr);column-gap:16px;height:512px}
+.costest .g-big b{font-size:34px}
 
 /* ============ APPROACH VALUE ============ */
 .av{display:grid;grid-template-columns:430px 1fr;gap:18px;height:592px}
@@ -313,7 +315,7 @@ h2{font-size:46px;max-width:1452px;margin-bottom:12px}
 .ask-foot .ask-band b{display:block;font:bold 12px var(--font-sans);text-transform:uppercase;letter-spacing:.4px;color:var(--pwc-orange);margin-bottom:5px}
 
 /* animations */
-.active h2,.active .subtitle,.active .content-label,.active .cost-cell,.active .press-card,.active .flow-wrap,.active .value-card,.active .tier,.active .pillar,.active .launch-callout,.active .gantt,.active .build-band>div,.active .ask-card,.active .band,.active .ask-band,.active .mkt-card,.active .mkt-matrix,.active .gtm,.active .av-facts,.active .av-cards .value-card,.active .who{animation:rise .55s ease both}
+.active h2,.active .subtitle,.active .content-label,.active .cost-cell,.active .press-card,.active .flow-wrap,.active .value-card,.active .tier,.active .pillar,.active .launch-callout,.active .gantt,.active .build-band>div,.active .ask-card,.active .band,.active .ask-band,.active .mkt-card,.active .mkt-matrix,.active .gtm,.active .costest,.active .av-facts,.active .av-cards .value-card,.active .who{animation:rise .55s ease both}
 .active .cost-cell:nth-child(2),.active .press-card:nth-child(2),.active .value-card:nth-child(2),.active .tier:nth-child(2),.active .pillar:nth-child(2),.active .build-band>div:nth-child(2),.active .ask-card:nth-child(2){animation-delay:.07s}
 .active .cost-cell:nth-child(3),.active .press-card:nth-child(3),.active .value-card:nth-child(3),.active .tier:nth-child(3),.active .pillar:nth-child(3),.active .build-band>div:nth-child(3),.active .ask-card:nth-child(3){animation-delay:.14s}
 .active .cost-cell:nth-child(4),.active .value-card:nth-child(4),.active .pillar:nth-child(4),.active .ask-card:nth-child(4){animation-delay:.21s}
@@ -703,7 +705,39 @@ body.editing .hint{display:none!important}
 </div>
 </section>
 
-<!-- ============ 10. FUNDING ASK ============ -->
+<!-- ============ 10. ESTIMATED COST ============ -->
+<section class="slide" data-section="Estimated cost">
+<div class="slide-inner">
+  <div class="kicker"><span></span>Estimated client cost</div>
+  <h2>What the three ways to market cost</h2>
+  <p class="subtitle">Priced from team size and duration. The low end is the smaller team and the shorter time. The high end is the larger team and the longer time.</p>
+  <div class="costest">
+    <div class="g-dir">Client-run to PwC-run<i></i></div>
+    <div class="g-hd c1"><div class="tag">Approach 1 · Your environment</div><h3>Your team maintains it</h3></div>
+    <div class="g-hd c2"><div class="tag">Approach 2 · Your environment</div><h3>PwC maintains it</h3></div>
+    <div class="g-hd c3"><div class="tag">Approach 3 · PwC environment</div><h3>PwC hosts and runs it</h3></div>
+    <div class="g-l">Team</div>
+    <div class="g-c c1"><div class="g-big"><b>8–12</b><span>people</span></div><div class="g-per">Through build, UAT and hypercare.</div></div>
+    <div class="g-c c2"><div class="g-big"><b>8–12</b><span>people</span></div><div class="g-per">Then a support team of 4–6.</div></div>
+    <div class="g-c c3"><div class="g-big"><b>4–6</b><span>people</span></div><div class="g-per">Then 3 support engineers.</div></div>
+    <div class="g-l">Duration</div>
+    <div class="g-c c1"><div class="g-big"><b>18–24</b><span>months</span></div><div class="g-per">8–12 months of build and UAT, then hypercare with the same team.</div></div>
+    <div class="g-c c2"><div class="g-big"><b>16–18</b><span>months</span></div><div class="g-per">Implementation, before the support team starts.</div></div>
+    <div class="g-c c3"><div class="g-big"><b>6–8</b><span>months</span></div><div class="g-per">Configuration, before the support engineers start.</div></div>
+    <div class="g-l">Fee</div>
+    <div class="g-c c1"><div class="g-big"><b>$2.3–4.6M</b></div><div class="g-per">Program fee, including hypercare. Build and UAT alone is $1.0–2.3M.</div></div>
+    <div class="g-c c2"><div class="g-big"><b>$2.0–3.5M</b></div><div class="g-per">Implementation.</div></div>
+    <div class="g-c c3"><div class="g-big"><b>$0.4–0.8M</b></div><div class="g-per">Implementation.</div></div>
+    <div class="g-l">After</div>
+    <div class="g-c c1 last"><div class="g-big"><b>Your team</b></div><div class="g-per">No PwC run fee in this estimate. Your team carries hypercare and the run.</div></div>
+    <div class="g-c c2 last"><div class="g-big"><b>$0.8–1.2M</b><span>a year</span></div><div class="g-per">Support team of 4–6.</div></div>
+    <div class="g-c c3 last"><div class="g-big"><b>$0.6M</b><span>a year</span></div><div class="g-per">Three support engineers.</div></div>
+  </div>
+  <div class="band gtm-band"><b>$100 an hour, 160 hours a person-month.</b> Planning estimate, not a quotation.</div>
+</div>
+</section>
+
+<!-- ============ 11. FUNDING ASK ============ -->
 <section class="slide fund" data-section="Funding ask">
 <div class="slide-inner">
   <div class="kicker"><span></span>Internal · R&amp;D Operations</div>

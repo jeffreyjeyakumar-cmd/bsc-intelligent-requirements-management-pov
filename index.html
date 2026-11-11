@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-edit-stamp="1794412139755"><head>
+<html lang="en" data-edit-stamp="1794412602627"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <title>Intelligent Requirements Management PoV | PwC</title>
@@ -16,9 +16,11 @@ html,body{height:100%;width:100%;overflow:hidden;background:#111;font-family:var
 body{display:flex;align-items:center;justify-content:center}
 #deckWrap{position:relative;background:#111;overflow:hidden}
 #deck{width:1600px;height:900px;position:relative;transform-origin:top left;background:#fff;overflow:hidden}
-.slide{position:absolute;inset:0;background:#fff;display:none;overflow:hidden}
+.slide{position:absolute;inset:0;display:none;overflow:hidden;background:linear-gradient(118deg,#fff 0%,#fff 68%,#fff5ed 100%)}
 .slide.active{display:block}
 .slide-inner{position:absolute;inset:0;padding:54px 74px 52px 74px}
+.slide-inner::before{content:'';position:absolute;z-index:4;top:22px;right:78px;width:42px;height:13px;background:var(--pwc-orange);transform:skewX(-32deg);box-shadow:20px 8px 0 var(--pwc-orange-400);pointer-events:none}
+.active .slide-inner::before{animation:brandIn .6s ease both}
 .slide::after{content:attr(data-section);position:absolute;left:74px;bottom:22px;font:12px var(--font-sans);color:#555}
 .slide::before{content:'PwC';position:absolute;right:74px;bottom:22px;font:bold 15px var(--font-sans);color:#000}
 .top-logo{position:absolute;left:44px;top:28px;width:70px;height:auto;z-index:45;opacity:0;pointer-events:none}
@@ -203,7 +205,8 @@ h2{font-size:46px;max-width:1452px;margin-bottom:12px}
 .g-c.c3 .g-per{color:#fff}
 .g-bar{position:relative;display:block;height:10px;margin-top:10px;background:var(--pwc-grey-100);border:1px solid var(--pwc-grey-200)}
 .g-c.c3 .g-bar{background:#222;border-color:#333}
-.g-bar i{position:absolute;top:0;bottom:0;left:0;background:var(--pwc-orange);transform-origin:left;animation:growX 1.4s ease forwards}
+.g-bar.slim{height:6px;margin-top:7px}
+.g-bar i{position:absolute;top:0;bottom:0;left:0;background:var(--pwc-orange);transform-origin:left;animation:growX 1.1s ease both}
 .g-bar i.rng{background:var(--pwc-orange-200)}
 .g-c.c3 .g-bar i.rng{background:var(--pwc-orange-400)}
 .gtm-band{margin-top:16px}
@@ -336,6 +339,8 @@ h2{font-size:46px;max-width:1452px;margin-bottom:12px}
 .active .cost-cell:nth-child(4),.active .value-card:nth-child(4),.active .pillar:nth-child(4),.active .ask-card:nth-child(4){animation-delay:.21s}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes growX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes brandIn{from{opacity:0;transform:skewX(-32deg) translateX(18px)}to{opacity:1;transform:skewX(-32deg) translateX(0)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 /* funding ask — one slide, before discussion */
 .fund .slide-inner{display:flex;flex-direction:column}
@@ -613,9 +618,9 @@ body.editing .hint{display:none!important}
     <div class="g-c c2"><div class="g-big"><b>16–18</b><span>months</span></div><em class="g-bar"><i style="width:66.7%"></i><i class="rng" style="left:66.7%;width:8.3%"></i></em></div>
     <div class="g-c c3"><div class="g-big"><b>6–8</b><span>months</span></div><em class="g-bar"><i style="width:25%"></i><i class="rng" style="left:25%;width:8.3%"></i></em></div>
     <div class="g-l">Investment</div>
-    <div class="g-c c1"><div class="g-big"><b>$2.3–4.6M</b></div><div class="g-per">Program fee, including hypercare. Build and UAT alone is $1.0–2.3M.</div></div>
-    <div class="g-c c2"><div class="g-big"><b>$2.0–3.5M</b></div><div class="g-per">Then $0.8–1.2M a year for a support team of 4–6.</div></div>
-    <div class="g-c c3"><div class="g-big"><b>$0.4–0.8M</b></div><div class="g-per">Then $0.6M a year for 3 support engineers.</div></div>
+    <div class="g-c c1"><div class="g-big"><b>$2.3–4.6M</b></div><div class="g-per">Program fee, including hypercare. Build and UAT alone is $1.0–2.3M.</div><em class="g-bar slim"><i style="width:50%"></i><i class="rng" style="left:50%;width:50%"></i></em></div>
+    <div class="g-c c2"><div class="g-big"><b>$2.0–3.5M</b></div><div class="g-per">Then $0.8–1.2M a year for a support team of 4–6.</div><em class="g-bar slim"><i style="width:43%"></i><i class="rng" style="left:43%;width:33%"></i></em></div>
+    <div class="g-c c3"><div class="g-big"><b>$0.4–0.8M</b></div><div class="g-per">Then $0.6M a year for 3 support engineers.</div><em class="g-bar slim"><i style="width:9%"></i><i class="rng" style="left:9%;width:8%"></i></em></div>
     <div class="g-l">Where it lives</div>
     <div class="g-c c1">Your cloud or data centre, under your security and validation model.</div>
     <div class="g-c c2">Your cloud or data centre, under your security and validation model.</div>
@@ -736,17 +741,17 @@ body.editing .hint{display:none!important}
     <div class="g-c c2"><div class="g-big"><b>8–12</b><span>people</span></div><div class="g-per">Then a support team of 4–6.</div></div>
     <div class="g-c c3"><div class="g-big"><b>4–6</b><span>people</span></div><div class="g-per">Then 3 support engineers.</div></div>
     <div class="g-l">Duration</div>
-    <div class="g-c c1"><div class="g-big"><b>18–24</b><span>months</span></div><div class="g-per">8–12 months of build and UAT, then hypercare with the same team.</div></div>
-    <div class="g-c c2"><div class="g-big"><b>16–18</b><span>months</span></div><div class="g-per">Implementation, before the support team starts.</div></div>
-    <div class="g-c c3"><div class="g-big"><b>6–8</b><span>months</span></div><div class="g-per">Configuration, before the support engineers start.</div></div>
+    <div class="g-c c1"><div class="g-big"><b>18–24</b><span>months</span></div><div class="g-per">8–12 months of build and UAT, then hypercare with the same team.</div><em class="g-bar slim"><i style="width:75%"></i><i class="rng" style="left:75%;width:25%"></i></em></div>
+    <div class="g-c c2"><div class="g-big"><b>16–18</b><span>months</span></div><div class="g-per">Implementation, before the support team starts.</div><em class="g-bar slim"><i style="width:67%"></i><i class="rng" style="left:67%;width:8%"></i></em></div>
+    <div class="g-c c3"><div class="g-big"><b>6–8</b><span>months</span></div><div class="g-per">Configuration, before the support engineers start.</div><em class="g-bar slim"><i style="width:25%"></i><i class="rng" style="left:25%;width:8%"></i></em></div>
     <div class="g-l">Fee</div>
-    <div class="g-c c1"><div class="g-big"><b>$2.3–4.6M</b></div><div class="g-per">Program fee, including hypercare. Build and UAT alone is $1.0–2.3M.</div></div>
-    <div class="g-c c2"><div class="g-big"><b>$2.0–3.5M</b></div><div class="g-per">Implementation.</div></div>
-    <div class="g-c c3"><div class="g-big"><b>$0.4–0.8M</b></div><div class="g-per">Implementation.</div></div>
+    <div class="g-c c1"><div class="g-big"><b>$2.3–4.6M</b></div><div class="g-per">Program fee, including hypercare. Build and UAT alone is $1.0–2.3M.</div><em class="g-bar slim"><i style="width:50%"></i><i class="rng" style="left:50%;width:50%"></i></em></div>
+    <div class="g-c c2"><div class="g-big"><b>$2.0–3.5M</b></div><div class="g-per">Implementation.</div><em class="g-bar slim"><i style="width:43%"></i><i class="rng" style="left:43%;width:33%"></i></em></div>
+    <div class="g-c c3"><div class="g-big"><b>$0.4–0.8M</b></div><div class="g-per">Implementation.</div><em class="g-bar slim"><i style="width:9%"></i><i class="rng" style="left:9%;width:8%"></i></em></div>
     <div class="g-l">After</div>
     <div class="g-c c1 last"><div class="g-big"><b>Your team</b></div><div class="g-per">No PwC run fee. Your team runs it after hypercare.</div></div>
-    <div class="g-c c2 last"><div class="g-big"><b>$0.8–1.2M</b><span>a year</span></div><div class="g-per">Support team of 4–6.</div></div>
-    <div class="g-c c3 last"><div class="g-big"><b>$0.6M</b><span>a year</span></div><div class="g-per">Three support engineers.</div></div>
+    <div class="g-c c2 last"><div class="g-big"><b>$0.8–1.2M</b><span>a year</span></div><div class="g-per">Support team of 4–6.</div><em class="g-bar slim"><i style="width:67%"></i><i class="rng" style="left:67%;width:33%"></i></em></div>
+    <div class="g-c c3 last"><div class="g-big"><b>$0.6M</b><span>a year</span></div><div class="g-per">Three support engineers.</div><em class="g-bar slim"><i style="width:50%"></i></em></div>
   </div>
   <div class="band gtm-band"><b>160 hours a person-month.</b> Planning estimate, not a quotation.</div>
 </div>
@@ -764,25 +769,25 @@ body.editing .hint{display:none!important}
     <div class="g-hd c2"><div class="tag">Approach 2 · Your environment</div><h3>PwC maintains it</h3></div>
     <div class="g-hd c3"><div class="tag">Approach 3 · PwC environment</div><h3>PwC hosts and runs it</h3></div>
     <div class="g-l"><div><b>Team time released</b><span>12 people × 8 hrs × 46 weeks</span></div></div>
-    <div class="g-c c1"><div class="g-big"><b>$883k</b></div><div class="g-per">4,416 hours released from re-keying.</div></div>
-    <div class="g-c c2"><div class="g-big"><b>$883k</b></div><div class="g-per">Equivalent to 4,416 hours.</div></div>
-    <div class="g-c c3"><div class="g-big"><b>$883k</b></div><div class="g-per">Equivalent to 4,416 hours.</div></div>
+    <div class="g-c c1"><div class="g-big"><b>$883k</b></div><div class="g-per">4,416 hours released from re-keying.</div><em class="g-bar slim"><i style="width:100%"></i></em></div>
+    <div class="g-c c2"><div class="g-big"><b>$883k</b></div><div class="g-per">Equivalent to 4,416 hours.</div><em class="g-bar slim"><i style="width:100%"></i></em></div>
+    <div class="g-c c3"><div class="g-big"><b>$883k</b></div><div class="g-per">Equivalent to 4,416 hours.</div><em class="g-bar slim"><i style="width:100%"></i></em></div>
     <div class="g-l"><div><b>Regulatory query response</b><span>2 rounds × 8 people × 72 hrs</span></div></div>
-    <div class="g-c c1"><div class="g-big"><b>$230k</b></div><div class="g-per"><b>About 5 weeks</b> recovered. 80 hours each today, 8 once live.</div></div>
-    <div class="g-c c2"><div class="g-big"><b>$230k</b></div><div class="g-per">Equivalent to 5 weeks and 1,152 hours.</div></div>
-    <div class="g-c c3"><div class="g-big"><b>$230k</b></div><div class="g-per">Equivalent to 5 weeks and 1,152 hours.</div></div>
+    <div class="g-c c1"><div class="g-big"><b>$230k</b></div><div class="g-per"><b>About 5 weeks</b> recovered. 80 hours each today, 8 once live.</div><em class="g-bar slim"><i style="width:26%"></i></em></div>
+    <div class="g-c c2"><div class="g-big"><b>$230k</b></div><div class="g-per">Equivalent to 5 weeks and 1,152 hours.</div><em class="g-bar slim"><i style="width:26%"></i></em></div>
+    <div class="g-c c3"><div class="g-big"><b>$230k</b></div><div class="g-per">Equivalent to 5 weeks and 1,152 hours.</div><em class="g-bar slim"><i style="width:26%"></i></em></div>
     <div class="g-l"><div><b>Change control, filing, audit</b><span>24 changes, the file, 2 audits</span></div></div>
-    <div class="g-c c1"><div class="g-big"><b>$204k</b></div><div class="g-per">24 × 4 × 6 hrs, plus 300 on the file and 144 on audits.</div></div>
-    <div class="g-c c2"><div class="g-big"><b>$204k</b></div><div class="g-per">Equivalent to 1,020 hours.</div></div>
-    <div class="g-c c3"><div class="g-big"><b>$204k</b></div><div class="g-per">Equivalent to 1,020 hours.</div></div>
+    <div class="g-c c1"><div class="g-big"><b>$204k</b></div><div class="g-per">24 × 4 × 6 hrs, plus 300 on the file and 144 on audits.</div><em class="g-bar slim"><i style="width:23%"></i></em></div>
+    <div class="g-c c2"><div class="g-big"><b>$204k</b></div><div class="g-per">Equivalent to 1,020 hours.</div><em class="g-bar slim"><i style="width:23%"></i></em></div>
+    <div class="g-c c3"><div class="g-big"><b>$204k</b></div><div class="g-per">Equivalent to 1,020 hours.</div><em class="g-bar slim"><i style="width:23%"></i></em></div>
     <div class="g-l"><div><b>Rework avoided</b><span>2 × 6 people × 2 wks × 40 hrs</span></div></div>
-    <div class="g-c c1"><div class="g-big"><b>$192k</b></div><div class="g-per">960 hours. Gaps caught while the draft is open.</div></div>
-    <div class="g-c c2"><div class="g-big"><b>$192k</b></div><div class="g-per">Equivalent to 960 hours.</div></div>
-    <div class="g-c c3"><div class="g-big"><b>$192k</b></div><div class="g-per">Equivalent to 960 hours.</div></div>
+    <div class="g-c c1"><div class="g-big"><b>$192k</b></div><div class="g-per">960 hours. Gaps caught while the draft is open.</div><em class="g-bar slim"><i style="width:22%"></i></em></div>
+    <div class="g-c c2"><div class="g-big"><b>$192k</b></div><div class="g-per">Equivalent to 960 hours.</div><em class="g-bar slim"><i style="width:22%"></i></em></div>
+    <div class="g-c c3"><div class="g-big"><b>$192k</b></div><div class="g-per">Equivalent to 960 hours.</div><em class="g-bar slim"><i style="width:22%"></i></em></div>
     <div class="g-l"><div><b>Technology and hosting</b><span>Only when PwC hosts it</span></div></div>
-    <div class="g-c c1 last"><div class="g-big"><b>$0</b></div><div class="g-per">Client-hosted. The client also staffs the run.</div></div>
-    <div class="g-c c2 last"><div class="g-big"><b>$0</b></div><div class="g-per">Client-hosted. The support fee replaces an internal run team.</div></div>
-    <div class="g-c c3 last"><div class="g-big"><b>$160k</b></div><div class="g-per">$8k a month for 3 environments, plus $64k.</div></div>
+    <div class="g-c c1 last"><div class="g-big"><b>$0</b></div><div class="g-per">Client-hosted. The client also staffs the run.</div><em class="g-bar slim"></em></div>
+    <div class="g-c c2 last"><div class="g-big"><b>$0</b></div><div class="g-per">Client-hosted. The support fee replaces an internal run team.</div><em class="g-bar slim"></em></div>
+    <div class="g-c c3 last"><div class="g-big"><b>$160k</b></div><div class="g-per">$8k a month for 3 environments, plus $64k.</div><em class="g-bar slim"><i style="width:18%"></i></em></div>
   </div>
   <div class="band gtm-band"><b>$1.51M a year</b> in team time on every approach, from 7,548 hours. Approach 3 adds $160k of hosting, <b>$1.67M</b> in all, and goes live about a year sooner. Approaches 2 and 3 also release about 4 people from running the platform; that effort is covered by the support fee on the cost slide. Illustrative, not a client result.</div>
 </div>

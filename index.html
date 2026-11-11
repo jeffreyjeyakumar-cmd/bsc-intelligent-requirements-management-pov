@@ -19,8 +19,6 @@ body{display:flex;align-items:center;justify-content:center}
 .slide{position:absolute;inset:0;display:none;overflow:hidden;background:linear-gradient(118deg,#fff 0%,#fff 68%,#fff5ed 100%)}
 .slide.active{display:block}
 .slide-inner{position:absolute;inset:0;padding:54px 74px 52px 74px}
-.slide-inner::before{content:'';position:absolute;z-index:4;top:22px;right:78px;width:42px;height:13px;background:var(--pwc-orange);transform:skewX(-32deg);box-shadow:20px 8px 0 var(--pwc-orange-400);pointer-events:none}
-.active .slide-inner::before{animation:brandIn .6s ease both,brandPulse 3.4s ease-in-out .6s infinite}
 .slide::after{content:attr(data-section);position:absolute;left:74px;bottom:22px;font:12px var(--font-sans);color:#555}
 .slide::before{content:'PwC';position:absolute;right:74px;bottom:22px;font:bold 15px var(--font-sans);color:#000}
 .top-logo{position:absolute;left:44px;top:28px;width:70px;height:auto;z-index:45;opacity:0;pointer-events:none}
@@ -813,7 +811,6 @@ body.editing .hint{display:none!important}
     <div class="g-c c2 last"><div class="g-big"><b>$0.8–1.2M</b><span>a year</span></div><div class="g-per">Support team of 4–6.</div><em class="g-bar slim"><i style="width:67%"></i><i class="rng" style="left:67%;width:33%"></i></em></div>
     <div class="g-c c3 last"><div class="g-big"><b>$0.6M</b><span>a year</span></div><div class="g-per">Three support engineers.</div><em class="g-bar slim"><i style="width:50%"></i></em></div>
   </div>
-  <div class="band gtm-band"><b>Planning estimate, not a quotation.</b></div>
 </div>
 </section>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-edit-stamp="1794413046976"><head>
+<html lang="en" data-edit-stamp="1794413592323"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <title>Intelligent Requirements Management PoV | PwC</title>
@@ -366,7 +366,8 @@ h2{font-size:46px;max-width:1452px;margin-bottom:12px}
 
 /* animations */
 .active .content-label:before{transform-origin:left center;animation:growX .55s ease both}
-.active h2,.active .subtitle,.active .content-label,.active .cost-cell,.active .press-card,.active .flow-wrap,.active .value-card,.active .tier,.active .pillar,.active .launch-callout,.active .gantt,.active .build-band>div,.active .ask-card,.active .band,.active .ask-band,.active .mkt-card,.active .mkt-matrix,.active .gtm,.active .costest,.active .ben,.active .av-facts,.active .av-cards .value-card,.active .who{animation:rise .7s ease both}
+.active h2,.active .subtitle,.active .content-label,.active .cost-cell,.active .press-card,.active .flow-wrap,.active .value-card,.active .tier,.active .pillar,.active .launch-callout,.active .gantt,.active .build-band>div,.active .ask-card,.active .band,.active .ask-band,.active .mkt-card,.active .mkt-matrix,.active .gtm,.active .costest,.active .ben,.active .av-facts,.active .av-cards .value-card,.active .who,.active .thanks-panel,.active .thanks-note{animation:rise .7s ease both}
+.active .thanks-note{animation-delay:.12s}
 .active .cost-cell:nth-child(2),.active .press-card:nth-child(2),.active .value-card:nth-child(2),.active .tier:nth-child(2),.active .pillar:nth-child(2),.active .build-band>div:nth-child(2),.active .ask-card:nth-child(2){animation-delay:.07s}
 .active .cost-cell:nth-child(3),.active .press-card:nth-child(3),.active .value-card:nth-child(3),.active .tier:nth-child(3),.active .pillar:nth-child(3),.active .build-band>div:nth-child(3),.active .ask-card:nth-child(3){animation-delay:.14s}
 .active .cost-cell:nth-child(4),.active .value-card:nth-child(4),.active .pillar:nth-child(4),.active .ask-card:nth-child(4){animation-delay:.21s}
@@ -411,6 +412,24 @@ h2{font-size:46px;max-width:1452px;margin-bottom:12px}
 .fund-note h3{font-size:22px;line-height:1.16;margin-bottom:8px}
 .fund-note p{font:16.5px/1.36 var(--font-sans)}
 .fund .band{margin-top:16px;flex-shrink:0}
+
+.thanks .slide-inner{display:flex;flex-direction:column}
+.thanks h2{font-size:72px;line-height:.96;margin-bottom:14px}
+.thanks .subtitle{max-width:980px;margin-bottom:26px}
+.thanks-row{display:grid;grid-template-columns:1.35fr .9fr;gap:18px;height:430px}
+.thanks-panel{background:#000;color:#fff;padding:40px 44px;display:flex;flex-direction:column;justify-content:flex-end;border-top:8px solid var(--pwc-orange);box-shadow:var(--shadow)}
+.thanks-panel .lbl,.thanks-note .lbl{font:bold 13px var(--font-sans);letter-spacing:.4px;text-transform:uppercase;margin-bottom:14px}
+.thanks-panel .lbl{color:var(--pwc-orange-300)}
+.thanks-panel h3{font-size:40px;line-height:1.08;color:#fff;margin-bottom:16px;max-width:640px}
+.thanks-panel p{font:20px/1.4 var(--font-sans);color:#fff;max-width:640px}
+.thanks-note{background:#fff;border:1px solid var(--pwc-grey-200);border-top:8px solid var(--pwc-orange);box-shadow:var(--soft);padding:32px 28px;display:flex;flex-direction:column}
+.thanks-note .lbl{color:var(--pwc-orange)}
+.thanks-note h3{font-size:28px;line-height:1.12;margin-bottom:12px}
+.thanks-note p{font:18px/1.38 var(--font-sans);margin-bottom:18px}
+.thanks-note ol{list-style:none;margin-top:auto;display:flex;flex-direction:column;gap:12px}
+.thanks-note li{position:relative;padding-left:36px;font:17px/1.3 var(--font-sans)}
+.thanks-note li b{position:absolute;left:0;top:0;color:var(--pwc-orange);font:bold 15px var(--font-sans)}
+.thanks .band{margin-top:18px;flex-shrink:0}
 
 /* editor chrome, overlaid on the slide’s bottom-right, same placement as the MSFT deck */
 .deck-ui{position:absolute;z-index:70;right:22px;bottom:18px;display:flex;flex-direction:column;align-items:flex-end;gap:14px;font-family:var(--font-sans)}
@@ -675,7 +694,7 @@ body.editing .hint{display:none!important}
     <div class="g-c c2 last">An IT owner for access, security and change control.</div>
     <div class="g-c c3 last">Product, design and regulatory decisions only.</div>
   </div>
-  <div class="band gtm-band"><b>160 hours a person-month.</b> Planning estimate, not a quotation.</div>
+  <div class="band gtm-band"><b>Planning estimate, not a quotation.</b></div>
 </div>
 </section>
 
@@ -794,7 +813,7 @@ body.editing .hint{display:none!important}
     <div class="g-c c2 last"><div class="g-big"><b>$0.8–1.2M</b><span>a year</span></div><div class="g-per">Support team of 4–6.</div><em class="g-bar slim"><i style="width:67%"></i><i class="rng" style="left:67%;width:33%"></i></em></div>
     <div class="g-c c3 last"><div class="g-big"><b>$0.6M</b><span>a year</span></div><div class="g-per">Three support engineers.</div><em class="g-bar slim"><i style="width:50%"></i></em></div>
   </div>
-  <div class="band gtm-band"><b>160 hours a person-month.</b> Planning estimate, not a quotation.</div>
+  <div class="band gtm-band"><b>Planning estimate, not a quotation.</b></div>
 </div>
 </section>
 
@@ -860,7 +879,35 @@ body.editing .hint{display:none!important}
 </div>
 </section>
 
-<!-- ============ 11. DISCUSSION ============ -->
+<!-- ============ 13. THANK YOU ============ -->
+<section class="slide thanks" data-section="Thank you">
+<div class="slide-inner">
+  <div class="kicker"><span></span>Thank you · Appendix</div>
+  <h2>Thank you</h2>
+  <p class="subtitle">The point of view ends here. The next page is appendix: the questions that set the baseline for a first programme.</p>
+  <div class="thanks-row">
+    <div class="thanks-panel">
+      <div class="lbl">Close</div>
+      <h3>One record, from the work itself</h3>
+      <p>Requirements, risk, verification and plan stay together, so a submission is built from the work rather than reconstructed at the end.</p>
+    </div>
+    <div class="thanks-note">
+      <div class="lbl">Appendix</div>
+      <h3>Where we would like your view</h3>
+      <p>Four questions on the next page.</p>
+      <ol>
+        <li><b>01</b>Where traceability breaks today</li>
+        <li><b>02</b>What FDA feedback has surfaced</li>
+        <li><b>03</b>How long impact assessment takes</li>
+        <li><b>04</b>Which programme is the right pilot</li>
+      </ol>
+    </div>
+  </div>
+  <div class="band"><b>Next page:</b> appendix. A working session with R&amp;D, QA and regulatory to choose the programme and one of the three approaches.</div>
+</div>
+</section>
+
+<!-- ============ 14. APPENDIX ============ -->
 <section class="slide" data-section="Appendix · Discussion">
 <div class="slide-inner">
   <div class="kicker"><span></span>Appendix · Where we would like your view</div>
